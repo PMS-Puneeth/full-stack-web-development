@@ -1,0 +1,38 @@
+/* General Body Styling with Pattern */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fdfae7; 
+    background-image: radial-gradient(#ffe699 1px, transparent 1px),
+                      radial-gradient(#ffe699 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    scroll-behavior: smooth;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: none; /* Hidden by default in CSS, toggled via JS 'flex' class */
+}
+
+/* Helper to show modal as flex (used by JS) */
+.modal-backdrop.flex {
+    display: flex;
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
